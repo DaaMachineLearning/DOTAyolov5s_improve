@@ -7,6 +7,9 @@ Put the downloaded dataset in the folder (test-main) and enter the run command i
 
 DOTA_split： 链接：https://pan.baidu.com/s/1dunBf9Ib5yNqbNJmszIq0A 提取码：54p2
 
+# 原模型 
+python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5s.yaml
+
 # 改进模型（CBAM注意力机制+EIOU损失函数+CoordConv卷积）训练指令
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMCoordConv.yaml
 
