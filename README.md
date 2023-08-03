@@ -1,5 +1,7 @@
 # 训练指令
 # datesets
+将下载好的数据集放在文件夹（test-main）中，在终端输入运行指令即可运行。
+Put the downloaded dataset in the folder (test-main) and enter the run command in the terminal to run.
 DOTA_split： 链接：https://pan.baidu.com/s/1dunBf9Ib5yNqbNJmszIq0A 提取码：54p2
 
 # 改进模型（CBAM注意力机制+EIOU损失函数+CoordConv卷积）训练指令
