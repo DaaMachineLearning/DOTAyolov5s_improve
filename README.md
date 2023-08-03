@@ -1,7 +1,7 @@
 # 训练指令
 # datesets
 
-将下载好的数据集放在文件夹（test-main）中，在终端输入运行指令即可运行。
+将下载好的数据集放在文件夹（DOTAyolov5s_improve-main）中，在终端输入运行指令即可运行。
 
 Put the downloaded dataset in the folder (DOTAyolov5s_improve-main) and enter the run command in the terminal to run.
 
