@@ -1,5 +1,7 @@
 # 训练指令
 # dota数据集转yolo格式
+# 链接：https://pan.baidu.com/s/1dunBf9Ib5yNqbNJmszIq0A 提取码：54p2
+
 python train.py --img 640 --batch 16 --epochs 5 --data ./DOTA/datasets/DOTA.yaml --cfg ./models/DOTAyolov5s.yaml
 
 python train.py --img 640 --batch 16 --epochs 5 --data ./data/coco128.yaml --cfg ./models/yolov5s.yaml
