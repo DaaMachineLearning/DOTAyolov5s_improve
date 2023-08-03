@@ -1,5 +1,6 @@
 # 训练指令
-dota数据集转yolo格式
+# dota数据集转yolo格式
+
 python train.py --img 640 --batch 16 --epochs 5 --data ./DOTA/datasets/DOTA.yaml --cfg ./models/DOTAyolov5s.yaml
 python train.py --img 640 --batch 16 --epochs 5 --data ./data/coco128.yaml --cfg ./models/yolov5s.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sC3ECA.yaml --weights ./runs/train/exp20/weights/best.pt
@@ -8,7 +9,6 @@ python train.py --img 640 --batch 16 --epochs 1 --data ./DOTA_split/DOTA_split.y
 python train.py --img 640 --batch 16 --epochs 5 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sC3CBAM.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./split/DOTA_split.yaml --cfg ./models/DOTAyolov5sC3CBAM.yaml
 python detect.py --weights best.pt --source ./data/images
-ECA注意力机制
 
 # class names
 names: ['small-vehicle', 
@@ -28,23 +28,23 @@ names: ['small-vehicle',
 'helicopter', 
 'container-crane']
 
-2023/7/26
-#注意力机制 SE / SimAM / ECA / CoordAtt / CBAM
+# 2023/7/26
+# 注意力机制 SE / SimAM / ECA / CoordAtt / CBAM
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5s.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sSE.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sSimAM.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sECA.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCoordAtt.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAM.yaml
-#卷积 SAConv / DCNConv / DSConv / CoordConv 
+# 卷积 SAConv / DCNConv / DSConv / CoordConv 
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMSAConv.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMDCNConv.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMDSConv.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMCoordConv.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCoordAttCoordConv.yaml
-#检测头 dyhead
+# 检测头 dyhead
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMdyhead.yaml
-#空间金字塔池化改进 SPP / SPPF / ASPP / RFB / SPPCSPC
+# 空间金字塔池化改进 SPP / SPPF / ASPP / RFB / SPPCSPC
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMSPPCSPC.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMSPPCSPC_group.yaml
 python train.py --img 640 --batch 16 --epochs 100 --data ./DOTA_split/DOTA_split.yaml --cfg ./models/DOTAyolov5sCBAMASPP.yaml
